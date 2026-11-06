@@ -1,7 +1,7 @@
 # Module 5: Secure API Lab Submission
 
-* **Name:** [Kleir A.Pendon]
-* **Section:** [BSICT 3B]
+* **Name:** Kleir A.Pendon
+* **Section:** BSICT 3B
 * **GitHub Repository URL:** https://github.com/KleirPendon/laravel13-secure-api-lab
 
 ## Reflection
