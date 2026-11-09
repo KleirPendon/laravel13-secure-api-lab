@@ -22,11 +22,12 @@ class AuthController extends Controller
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
+            'role' => 'student', // Explicitly forces public registrations to be students
         ]);
 
         return response()->json([
             'message' => 'Registration successful',
-            'user' => $user->only('id', 'name', 'email'),
+            'user' => $user->only('id', 'name', 'email', 'role'),
         ], 201);
     }
 
@@ -57,7 +58,7 @@ class AuthController extends Controller
     public function profile(Request $request)
     {
         return response()->json([
-            'user' => $request->user()->only('id', 'name', 'email'),
+            'user' => $request->user()->only('id', 'name', 'email', 'role'),
         ]);
     }
 
